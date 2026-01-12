@@ -24,6 +24,50 @@
     .card p{margin:0;color:var(--muted);font-size:14px}
     footer{margin-top:26px;color:var(--muted);font-size:13px}
     @media (max-width:820px){ .grid{grid-template-columns:1fr} h1{font-size:28px} }
+    .phone-row{
+  margin-top:10px;
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.tapcall{
+  color: var(--text);
+  text-decoration:none;
+  font-weight:700;
+  padding:10px 14px;
+  border-radius:12px;
+  border:1px solid #2a3958;
+  background: rgba(15,23,42,.55);
+  transition: box-shadow .18s ease, transform .18s ease, border-color .18s ease;
+}
+
+.tapcall:hover{
+  border-color: rgba(239,68,68,.9);
+  box-shadow: 0 0 0 4px rgba(239,68,68,.18), 0 10px 26px rgba(239,68,68,.22);
+  transform: translateY(-1px);
+}
+
+.callbtn{
+  display:inline-block;
+  text-decoration:none;
+  background: var(--accent);
+  color:#0b0f1a;
+  font-weight:900;
+  padding:10px 16px;
+  border-radius:12px;
+  border:0;
+  transition: box-shadow .18s ease, transform .18s ease, filter .18s ease;
+}
+
+.callbtn:hover{
+  box-shadow: 0 0 0 4px rgba(239,68,68,.20), 0 12px 30px rgba(239,68,68,.30);
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
   </style>
 </head>
 <body>
@@ -43,7 +87,16 @@
   margin-top:10px;
   font-size:14px;
 ">
-  9515 Montana Avenue • El Paso, Texas 79925 • (915) 999-6519
+  • 9515 Montana Avenue • El Paso, Texas 79925 •
+</div>
+<div class="phone-row">
+  <a class="tapcall" href="tel:19159996519" aria-label="Tap to call 915 Customs & Collision">
+    Tap to Call: (915) 999-6519
+  </a>
+
+  <a class="callbtn" href="tel:19159996519" aria-label="Call Now">
+    Call Now
+  </a>
 </div>
 
     </header>
